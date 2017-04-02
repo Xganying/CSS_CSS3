@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-lines</title>
+    <style>
+        img{
+            width:300px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .box1,.box2{
+            display: box;
+            display:-webkit-box;
+            display:-moz-box;
+            display:-ms-box;
+        }
+        #box1{
+            border: 1px solid red;
+            width: 700px;
+            height: 300px;
+            -webkit-box-lines: multiple;
+            -moz-box-lines: multiple;
+            box-lines: multiple;
+        }
+         #box2{
+            border: 1px solid red;
+            width: 700px;
+            height: 300px;
+            -webkit-box-lines: single;
+            -moz-box-lines: single;
+            box-lines: single;
+        }
+    </style>
+</head>
+<body>
+    <h4>multiple</h4>
+    <div class="box1" id="box1">
+        <div><img src="./images/1.jpg"></div>
+        <div><img src="./images/2.jpg"></div>
+        <div><img src="./images/3.jpg"></div>
+        <div><img src="./images/4.jpg"></div>
+        <div><img src="./images/5.jpg"></div>
+        <div><img src="./images/6.jpg"></div>
+        <div><img src="./images/7.jpg"></div>
+        <div><img src="./images/8.jpg"></div>
+        <div><img src="./images/9.jpg"></div>
+        <div><img src="./images/10.jpg"></div>
+    </div>
+    <h4>single</h4>
+    <div class="box2" id="box2">
+        <div><img src="./images/1.jpg"></div>
+        <div><img src="./images/2.jpg"></div>
+        <div><img src="./images/3.jpg"></div>
+        <div><img src="./images/4.jpg"></div>
+        <div><img src="./images/5.jpg"></div>
+        <div><img src="./images/6.jpg"></div>
+        <div><img src="./images/7.jpg"></div>
+        <div><img src="./images/8.jpg"></div>
+        <div><img src="./images/9.jpg"></div>
+        <div><img src="./images/10.jpg"></div>
+    </div>
+</body>
+</html>

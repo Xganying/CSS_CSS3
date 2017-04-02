@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-orient</title>
+    <style>
+       .horizontal li:nth-child(odd){    /*设置奇数个元素的样式*/
+            width: 20%;
+            color:blue;                 /*设置字体颜色*/
+            -webkit-box-flex: 1;
+            -moz-box-flex:1;
+            box-flex:1;
+            -webkit-box-flex-group: 1;
+            -moz-box-flexgroup: 1;
+            box-flex-group:1;
+            background: #666;
+        }
+        .horizontal li:nth-child(even){   /*设置偶数个元素的样式*/
+            width: 20%;
+            color:blue;  
+            background-color:aquamarine;  
+        }
+        .horizontal{  /*设置内容从左到右显示：开启弹性盒模型，设置父容器的display属性值为box或inline-box，并指定*/
+            width: 100%;          /*宽度*/
+            height: 200px;        /*高度*/
+            text-align: center;   /*文字居中*/
+            list-style: none;
+            display: box;         /*显示的方式*/
+            display:-webkit-box;
+            display: -moz-box;
+            display: -o-box;
+            display: -ms-box;
+        }
+        #horizontal{ /*设置从左到右显示*/
+            -webkit-box-orient: horizontal; /*Webkit引擎*/
+            -moz-box-orient: horizontal;    /*Mozilia Geocko引擎*/
+            -o-box-orient: horizontal;      /*兼容Presto引擎*/
+            -ms-box-orient: horizontal;     /*兼容IE浏览器*/
+            box-orient:horizontal;          /*兼容标准：目前没有浏览器支持 box-orient 属性。*/
+        }
+    </style>
+</head>
+<body>
+    <ul id="horizontal" class="horizontal">
+        <li>
+            刚好遇见你 <br>
+            我们笑着 <br>
+            我们抬头望天空 <br>
+            星星还亮着几颗 <br>
+            我们唱着 <br>
+            时间的歌 <br> 
+            才懂得相互拥抱 <br>
+            到底是为了什么 <br>
+        </li> 
+        <li>
+            因为我刚好遇见你 <br>
+            留下足迹才美丽<br>
+            风吹花落泪如雨<br>
+            因为不想分离<br>
+            因为刚好遇见你<br>
+            留下十年的期许<br>
+            如果再相遇<br>
+            我想我会记得你<br>
+        </li>
+        <li>
+            因为我刚好遇见你<br>
+            留下足迹才美丽<br>
+            风吹花落泪如雨<br>
+            因为不想分离<br>
+            因为刚好遇见你<br>
+            留下十年的期许<br>
+            如果再相遇<br>
+            我想我会记得你<br>
+        </li>
+    </ul>
+</body>
+</html>

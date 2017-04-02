@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-flex</title>
+    <style>
+        ul,li{
+            list-style: none;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: box; /*设置父容器的显示为盒模型*/
+            display: -webkit-box;
+            display: -moz-box;
+            text-align: center;   /*设置文字居中*/
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+        }
+        .container .left-aside{          /*设置内左侧的盒子空间为4/5*/
+            background-color: #ff8080;
+            -webkit-box-flex: 8;         /*兼容webkit内核*/
+            -moz-box-flex: 8;            /*兼容Gecko内核*/
+            box-flex:8;                  /*标准用法*/
+        }
+        .container .center-content{      /*设置中间的盒子空间为1/10*/
+            background-color: #390;
+            -webkit-box-flex: 1;         /*兼容webkit内核*/
+            -moz-box-flex: 1;            /*兼容Gecko内核*/
+            box-flex:1;                  /*标准用法*/
+        }
+        .container .right-aside{        /*设置右侧栏的盒子空间为1/10*/
+            background-color: #5533ff;
+             -webkit-box-flex: 1;       /*兼容webkit内核*/
+            -moz-box-flex: 1;           /*兼容Gecko内核*/
+            box-flex:1;                 /*标准用法*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-aside">
+            <h2>刚好遇见你</h2>
+            <ul>
+                <li>我们哭了</li>
+                <li>我们笑着</li>
+                <li>我们抬头望天空</li>
+                <li>星星还亮着几颗</li>
+                <li>我们唱着</li>
+                <li>时间的歌</li>
+                <li>才懂得相互拥抱</li>
+                <li>到底是为了什么</li>
+                <li>因为我刚好遇见你</li>
+                <li>留下足迹才美丽</li>
+            </ul>
+        </div>
+        <div class="center-content">
+            <h2>烟火</h2>
+            <ul>
+                <li>是否还记得一起看烟火</li>
+                <li>我在你眼里看到闪烁</li>
+                <li>冷冽的寒风把你吹向我</li>
+                <li>抱你在我怀中没想太多</li>
+                <li>爱情里的心动</li>
+                <li>常常让我难以去捉摸</li>
+                <li>付出感情太多</li>
+                <li>原来多情人总被伤的最重</li>
+                <li>想起你的拥抱</li>
+                <li>这感觉短暂纪念</li>
+            </ul>
+           
+        </div>
+        <div class="right-aside">
+            <h2>关于你和我的故事</h2>
+            <ul>
+                <li>一生能忘多少事</li>
+                <li>细节太难去证实</li>
+                <li>也许是 都计较过几次</li>
+                <li>若用曾经这个词</li>
+                <li>模糊掉了多少字</li>
+                <li>你说想看我穿婚纱的样子</li>
+                <li>关于你和我的故事</li>
+                <li>从试探逃避到开始</li>
+                <li>旁若无人 你傻笑的真挚</li>
+                <li>关于你和我的故事</li>
+            </ul>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
