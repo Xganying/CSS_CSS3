@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多列定宽+1列自适用</title>
+    <style>
+        
+    /* 多列定宽+1列自适用 
+    .left,.center{
+        float: left;
+        width: 200px;
+        margin-right: 10px;
+        background-color: #5f5;
+    }
+    .right{
+        overflow: hidden;
+        background-color: #c5c;
+    }*/
+
+    /* 多列不定宽+1列自适用 */
+    .left,.center{
+        float: left;
+        margin-right: 10px;
+        background-color: #5f5;
+    }
+    .right{
+        overflow: hidden;
+        background-color: #c5c;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="left">
+            <p>left</p>
+            <p>定宽</p>
+        </div>
+        <div class="center">
+            <p>center</p>
+            <p>定宽</p>
+        </div>
+        <div class="right">
+            <p>right</p>
+            <p>自适用</p>
+        </div>
+    </div>
+
+</body>
+</html>

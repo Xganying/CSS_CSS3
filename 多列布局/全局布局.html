@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全局布局(内容区域可滚动)</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+
+        /*方案一: position 
+        body,.container{
+            height: 100%;
+            overflow: hidden;
+        }
+        .header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: #cc88cc;
+        }
+        .slide{
+            position: absolute;
+            left: 0;
+            top: 70px;
+            bottom: 50px;
+            width: 200px;
+            background: #5f9ea0;
+        }
+        .content{
+            position: absolute;
+            left: 200px;
+            right: 0;
+            top: 70px;
+            bottom: 50px;
+            overflow: auto;
+            background: #ff69b4;
+        }
+        .content .inner{
+            min-height: 1000px;
+        }
+        .footer{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 50px;
+            background: #ccc;
+        }*/
+
+
+        /*方案二: flex */
+        body,.container{
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+            height: 70px;
+            background: #cc88cc;
+        }
+        .footer{
+            height: 50px;
+            background: #ccc;
+        }
+        .content{
+            flex: 1;
+            display: flex;
+        }
+        .slide{
+            width: 200px;
+            background: #5f9ea0;
+        }
+        .right{
+            flex: 1;
+            overflow: hidden;
+            background: #ff69b4;
+        }
+        .right .inner{
+            min-height: 1000px;
+            /*overflow: hidden;*/
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <!-- 方案一
+    <div class="container">
+        <div class="header">header</div>
+        <div class="slide">slide</div>
+        <div class="content">
+            <div class="inner">inner</div>
+        </div>
+        <div class="footer">footer</div>
+    </div> -->
+
+    <!-- 方案二 -->
+    <div class="container">
+        <div class="header">header</div>
+        <div class="content">
+            <div class="slide">slide</div>
+            <div class="right">
+                <div class="inner">inner</div>
+            </div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+
+</body>
+</html>

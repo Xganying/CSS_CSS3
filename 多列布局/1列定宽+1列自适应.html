@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1列定宽+1列自适应布局</title>
+    <!--<link rel="stylesheet" href="./reset.css">-->
+    <style>
+        
+        /* 1列定宽 + 1列自适应 方法一:  float + margin )  
+        .left{
+            float:left;
+            width:300px;
+            background-color: #5f5;
+        }
+        .right{
+            margin-left:310px;
+            background-color: #c5c;
+        }*/
+
+
+        /* 方法二：float + margin + position 
+        .left{
+            float:left;
+            width:100px;
+            position: relative;
+            background-color: #5f5;
+        }
+        .right-fix{
+            float: right;
+            width:100%;
+            margin-left:-100px;
+        }
+        .right{
+            margin: -20px 0 0 110px;
+            background-color: #c5c;
+        }*/
+        
+
+        /* 方法三 : float + overflow 
+        .left{
+            float: left;
+            width:300px;
+            margin-right:10px;
+            background-color: #5f5;
+        }
+        .right{
+            overflow: hidden;
+            background-color: #c5c;
+        }*/
+        
+
+        /* 方法四: table 
+        .parent{
+            display: table;
+            width:100%;
+            table-layout: fixed;
+        }
+        .left{
+             display: table-cell;
+             width: 300px;
+             padding-right: 20px;
+             background: #5f5;
+        }
+        .right{
+            display: table-cell;
+            background: #c5c;
+        }*/
+
+
+        /* 方法五: flex 
+        .parent{
+            display: flex;
+        }
+        .left{
+            width: 300px;
+            margin-right: 10px;
+            background: #5f5;
+        }
+        .right{
+            flex: 1;
+             background: #c5c;
+        }
+        */
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 方法一 三 四 五 
+    <div class="parent">
+        <div class="left">
+            <p>left定宽</p>
+        </div>
+        <div class="right">
+            <p>right1自适应</p>
+            <p>right2</p>
+        </div>
+    </div>-->
+
+
+     <!--方法二  -->
+     <div class="parent">
+        <div class="left">
+            <p>left定宽</p>
+        </div>
+        <div class="right-fix">
+            <div class="right">
+                <p>right1自适应</p>
+                <p>right2</p> 
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
