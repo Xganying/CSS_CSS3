@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>异形</title>
+    <style>
+
+        /*square 正方形*/
+        .square{
+            width:0;
+            height: 0;
+            border-width:100px;
+            border-style: solid;
+            border-color: red yellow green blue;
+            padding: 50px;   /*中间出现一个宽高50px的正方形 */
+        }
+
+        /*triangle1 倒三角*/
+        .triangle1{
+            width:0;
+            height: 0;
+            border-width: 100px;
+            border-style: solid;
+            border-color: purple transparent transparent transparent; /*transparent设置透明色*/
+        }
+        /*triangle2 正三角*/
+        .triangle2{
+            width:0;
+            height: 0;
+            border-right: 50px solid transparent;
+            border-left: 50px solid transparent;
+            border-bottom: 100px solid purple;
+        }
+        /*triangle3 直角三角*/
+        .triangle3{
+            width : 0;
+            height: 0;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid purple;
+        }
+
+         /*pieChart 饼状图*/
+        .pieChart{
+            width: 0;
+            height: 0;
+            border-width: 100px;
+            border-style: solid;
+            border-color: red yellow green blue;
+            border-radius: 100px;
+        }
+
+        /*sector 扇形图*/
+        .sector{
+            width: 0;
+            height: 0;
+            border-width: 100px;
+            border-style: solid;
+            border-color: transparent transparent red;
+            border-radius: 100px;
+        }
+
+        /*anySector 任意角度的扇形*/
+        .anySector{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: red;
+        }
+        .r1{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: yellow;
+            clip:rect(0, 100px, 200px, 0);
+            transform: rotate(90deg);
+        }
+        .r2{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            background-color: green;
+             clip:rect(0, 100px, 200px, 0);
+            transform: rotate(0deg);
+        }
+
+        /*花瓣形状*/
+        .s1{
+            width:200px;
+            height: 200px;
+            background-color: blue;
+            border-radius: 20% 80% 30% 70%/80% 70% 30% 20%;
+        }
+
+        /*阴影的使用*/
+        .s2{
+            width:100px;
+            height: 100px;
+            background-color: blue;
+            box-shadow: 0 0 0 2px red, inset 0 0 20px blue, 110px 0 0 2px green;
+        }
+
+        /*线性渐变*/
+        .s3{
+            width:100px;
+            height: 100px;
+            border: 10px solid red;
+            border-radius: 50%;
+            background: linear-gradient(to right bottom, transparent 46%, red 46%, red 54%, transparent 54%);
+        }
+
+        /*文字卡片*/
+        .text_card {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+        .card {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 40px;
+        }
+        .txt {
+            padding: 10px;
+        }
+
+        /*图像卡片*/
+        .img_card {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+        .description{
+            padding: 10px;
+        }
+   
+         /*立方体*/
+        .cube{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .top{
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .bottom{
+            transform:translateZ(-150px); 
+        }
+        .left{
+            transform: rotateX(90deg) translateZ(-150px);
+        }
+        .right{
+            transform: translateZ(150px);
+        }
+        .back{
+            transform: rotateY(180deg) translateZ(150px);
+        }
+        .front{
+            transform: rotateY(180deg) translateZ(-150px);
+        }
+
+    </style>
+</head>
+<body>
+
+     <!--square 正方形-->
+    <div class="square"></div><br>
+
+    <!--triangle1 倒三角-->
+    <div class="triangle1"></div><br>
+    
+    <!--triangle2 正三角-->
+    <div class="triangle2"></div><br>
+
+     <!--triangle3 直角三角-->
+    <div class="triangle3"></div><br>
+
+    <!--pieChart 饼状图-->
+    <div class="pieChart"></div><br>
+
+    <!--sector 扇形图-->
+    <div class="sector"></div><br>
+
+    <!--anySector 任意角度的扇形-->
+    <div class="anySector">
+        <div class="r1"></div>
+        <div class="r2"></div>
+    </div><br>
+    
+    <!--花瓣形状-->
+    <div class="s1"></div><br>
+    
+    <!--阴影的使用-->
+     <div class="s2"></div><br>
+
+     <!--线性渐变:禁止符号-->
+     <div class="s3"></div><br>
+
+    <!--文字卡片-->
+     <div class="text_card">
+        <div class="card">
+            <h1>1</h1>
+        </div>
+        <div class="txt">
+            <p>September 11, 2017</p>
+        </div>
+    </div><br>
+
+    <!--图像卡片-->
+    <div class="img_card">
+        <img src="http://www.runoob.com/try/demo_source/rock600x400.jpg" alt="img" style="width:100%">
+        <div class="description">
+            <p>Hardanger, Norway</p>
+        </div>
+    </div><br>
+
+     <!--立方体 (有问题) -->
+     <section class="cube_container">
+         <div class="cube">
+            <div class="top">上</div>
+            <div class="bottom">下</div>
+            <div class="left">左</div>
+            <div class="right">右</div>
+            <div class="front">前</div>
+            <fiv class="back">后</fiv>
+        </div><br>
+     </section>
+    
+
+</body>
+</html>
